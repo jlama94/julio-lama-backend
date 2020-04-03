@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 
-@CrossOrigin(origins = "*", methods ={RequestMethod.GET}, allowedHeaders = {"*"})
+@CrossOrigin(origins = "https://jlama94.github.io/julio-lama/", methods ={RequestMethod.GET}, allowedHeaders = {"*"})
 @RestController
 public class GitHubController {
 
