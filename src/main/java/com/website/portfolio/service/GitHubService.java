@@ -1,6 +1,5 @@
 package com.website.portfolio.service;
 
-import com.website.portfolio.Token;
 import com.website.portfolio.client.GitHubClient;
 import com.website.portfolio.client.model.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,16 +11,15 @@ import java.util.List;
 @Service
 public class GitHubService {
   private GitHubClient gitHubClient;
-  private Token myGitHubToken;
 
   @Autowired
-  public GitHubService(GitHubClient client, Token token) {
+  public GitHubService(GitHubClient client) {
     gitHubClient = client;
-    myGitHubToken = token;
   }
 
   public List<Repository> getRepositories() {
+    String token = "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";
 
-    return gitHubClient.getRepositories(myGitHubToken.getMyToken());
+    return gitHubClient.getRepositories(token);
   }
 }
